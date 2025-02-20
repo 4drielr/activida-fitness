@@ -1,71 +1,84 @@
 function generatePDF(exercisePlan, dietPlan) {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
-    let yPos = 20;
+    let yPosition = 20;
 
-    // Title
+    // Add title
     doc.setFontSize(20);
-    doc.text('Tu Plan Personalizado Semanal', 20, yPos);
-    yPos += 20;
+    doc.text('Tu Plan Personalizado', 20, yPosition);
+    yPosition += 20;
 
-    // Exercise Plan
+    // Exercise Plan Section
     doc.setFontSize(16);
-    doc.text('Plan de Ejercicios', 20, yPos);
-    yPos += 10;
+    doc.text('Plan de Ejercicios', 20, yPosition);
+    yPosition += 10;
 
-    exercisePlan.forEach(dayPlan => {
-        doc.setFontSize(14);
-        doc.text(dayPlan.day, 20, yPos);
-        yPos += 10;
-
-        doc.setFontSize(12);
-        dayPlan.exercises.forEach(exercise => {
-            doc.text('• ' + exercise, 30, yPos);
-            yPos += 7;
-        });
-        yPos += 5;
-
-        if (yPos > 250) {
+    doc.setFontSize(12);
+    exercisePlan.forEach((dayPlan) => {
+        if (yPosition > 270) {
             doc.addPage();
-            yPos = 20;
+            yPosition = 20;
         }
+        // Add day header
+        doc.setFont(undefined, 'bold');
+        doc.text(dayPlan.day, 20, yPosition);
+        yPosition += 10;
+
+        // Add exercises
+        doc.setFont(undefined, 'normal');
+        dayPlan.exercises.forEach((exercise) => {
+            if (yPosition > 270) {
+                doc.addPage();
+                yPosition = 20;
+            }
+            doc.text(`• ${exercise}`, 30, yPosition);
+            yPosition += 7;
+        });
+        yPosition += 5; // Add space between days
     });
 
-    // Diet Plan
+    yPosition += 10;
+
+    // Diet Plan Section
+    doc.setFontSize(16);
     doc.addPage();
-    yPos = 20;
+    doc.text('Plan de Alimentación', 20, yPosition);
+    yPosition += 10;
 
-    doc.setFontSize(16);
-    doc.text('Plan de Alimentación', 20, yPos);
-    yPos += 10;
-
-    doc.setFontSize(14);
-    doc.text(`Calorías diarias recomendadas: ${dietPlan.calories}`, 20, yPos);
-    yPos += 15;
-
-    dietPlan.meals.forEach(dayPlan => {
-        doc.setFontSize(14);
-        doc.text(dayPlan.day, 20, yPos);
-        yPos += 10;
-
-        doc.setFontSize(12);
-        dayPlan.meals.forEach(meal => {
-            doc.text(meal.name, 30, yPos);
-            yPos += 7;
-
-            meal.items.forEach(item => {
-                doc.text('• ' + item, 40, yPos);
-                yPos += 7;
-            });
-            yPos += 3;
-        });
-        yPos += 5;
-
-        if (yPos > 250) {
+    doc.setFontSize(12);
+    dietPlan.meals.forEach((dayPlan) => {
+        if (yPosition > 270) {
             doc.addPage();
-            yPos = 20;
+            yPosition = 20;
         }
+        // Add day header
+        doc.setFont(undefined, 'bold');
+        doc.text(dayPlan.day, 20, yPosition);
+        yPosition += 10;
+
+        // Add meals
+        doc.setFont(undefined, 'normal');
+        dayPlan.meals.forEach((meal) => {
+            if (yPosition > 270) {
+                doc.addPage();
+                yPosition = 20;
+            }
+            doc.text(meal.name, 30, yPosition);
+            yPosition += 7;
+
+            meal.items.forEach((item) => {
+                if (yPosition > 270) {
+                    doc.addPage();
+                    yPosition = 20;
+                }
+                doc.text(`• ${item}`, 40, yPosition);
+                yPosition += 7;
+            });
+            yPosition += 3;
+        });
+        yPosition += 5; // Add space between days
     });
 
+    // Save the PDF
     doc.save('plan-personalizado.pdf');
 }
