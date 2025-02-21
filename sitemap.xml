@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://activida-fitness.vercel.app/</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200</image:loc>
+            <image:title>ActiVida - Ejercicio y Nutrición</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://activida-fitness.vercel.app/articulo-ejercicio.html</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800</image:loc>
+            <image:title>La Ciencia detrás del Ejercicio</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://activida-fitness.vercel.app/articulo-nutricion.html</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800</image:loc>
+            <image:title>Nutrición: El Pilar del Éxito</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://activida-fitness.vercel.app/articulo-resistencia.html</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800</image:loc>
+            <image:title>Entrenamiento de Resistencia</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://activida-fitness.vercel.app/articulo-suplementacion.html</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800</image:loc>
+            <image:title>Guía de Suplementación Deportiva</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://activida-fitness.vercel.app/articulo-yoga.html</loc>
+        <lastmod>2024-03-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800</image:loc>
+            <image:title>Yoga y Meditación para el Bienestar</image:title>
+        </image:image>
+    </url>
+</urlset>

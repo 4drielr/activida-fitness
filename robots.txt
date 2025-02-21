@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Allow: /articulo-ejercicio.html
+Allow: /articulo-nutricion.html
+Allow: /articulo-resistencia.html
+Allow: /articulo-suplementacion.html
+Allow: /articulo-yoga.html
+Sitemap: https://activida-fitness.vercel.app/sitemap.xml
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
