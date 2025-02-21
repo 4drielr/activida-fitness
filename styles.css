@@ -126,11 +126,20 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: #3498db;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 135px;
+    width: 135px;
 }
 
 .logo a {
     text-decoration: none;
     color: #3498db;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links {
